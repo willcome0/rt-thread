@@ -13,7 +13,7 @@
 #include <board.h>
 
 /* defined the LED0 pin: PC0 */
-#define LED0_PIN    GET_PIN(C, 0)
+#define LED0_PIN    GET_PIN(E, 5)
 
 int main(void)
 {
@@ -24,8 +24,10 @@ int main(void)
     while (count++)
     {
         rt_pin_write(LED0_PIN, PIN_HIGH);
+		rt_kprintf("LED¿ª\n" ); 
         rt_thread_mdelay(500);
         rt_pin_write(LED0_PIN, PIN_LOW);
+		rt_kprintf("LED¹Ø\n" ); 
         rt_thread_mdelay(500);
     }
 
